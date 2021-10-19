@@ -39,13 +39,13 @@
       $sql = "update empleados set dni='"
       .$formularioModificar['modificarDNI'].'", nombre="'.$formularioModificar['modificarNombre'].'", email="'
       .$formularioModificar['modificarEmail'].'", telefono="'.$formularioModificar['modificarTelefono']."'
-      where id=".$formularioModificar['modificarId'].";";
+      where idEmpleado=".$formularioModificar['modificarId'].";";
       $resultado = $this->conexion->consultar($sql);
 
       header('Location:index.php');
     }
     function borrar($borrarId){
-      $sql = "delete from empleados where id=".$borrarId.";";
+      $sql = "delete from empleados where idEmpleado=".$borrarId;
       $resultado = $this->conexion->consultar($sql);
 
       header('Location:index.php');

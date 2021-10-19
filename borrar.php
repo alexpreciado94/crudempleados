@@ -8,18 +8,18 @@
     <?php
       include_once 'procesos.php';
       $procesoBorrar = new Procesos();
-      $filaBorrar = $_get['filaBorrar'];
+      $filaBorrar = $_GET['filaBorrar'];
 
-      echo '<form method="get">
+      echo '<form method="POST">
         <label>¿Esta sequro que quiere borrar al empleado '.$filaBorrar.'?</label>
         <input type="submit" name="si" value="SI" />
         <input type="submit" name="no" value="NO" />
       </form>';
-      if(isset($_get['si'])){
-        $procesoborrarborrar($filaBorrar);
+      if(isset($_POST['si'])){
+        $procesoBorrar->borrar($filaBorrar);
         header('Location:index.php');
       }
-      if(isset($_get['no'])){
+      if(isset($_POST['no'])){
         header('Location:index.php');
       }
     ?>

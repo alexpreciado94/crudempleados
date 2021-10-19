@@ -25,20 +25,28 @@
           <td>'.$fila['email'].'</td>
           <td>'.$fila['telefono'].'</td>
           <td><a href="modificar.html?'.$fila[i].'">Modificar</a></td>
-          <td><a href="borrar.html?'.$fila[i].'">Modificar</a></td>
+          <td><a href="borrar.php?'.$fila[i].'">Modificar</a></td>
         </tr>';
       }
       echo '</table>';
     }
-    function añadir(){
-      $sql = 'select * from empleados';
+    function anadir($formularioAnadir){
+      $sql = 'insert into empleados values ('.$formularioAnadir['newId'].', '
+      .$formularioAnadir['newDNI'].', '.$formularioAnadir['newNombre'].', '
+      .$formularioAnadir['newEmail'].', '.$formularioAnadir['newTelefono'].');';
       $resultado = $this->conexion->consultar($sql);
     }
     function modificar(){
+      $sql = 'select * from empleados';
+      $resultado = $this->conexion->consultar($sql);
 
+      header('Location:index.php');
     }
     function borrar(){
+      $sql = 'select * from empleados';
+      $resultado = $this->conexion->consultar($sql);
 
+      header('Location:index.php');
     }
   }
 ?>

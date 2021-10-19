@@ -16,7 +16,7 @@
         <th>E-MAIL</th>
         <th>TELÉFONO</th>
       </tr>';
-      for($i=0;$i<$resultado->num_rows;$i++){
+      for($i=1;$i<$resultado->num_rows;$i++){
         $fila = mysqli_fetch_assoc($resultado);
         echo '<tr>
           <td>'.$fila['id'].'</td>
@@ -24,8 +24,8 @@
           <td>'.$fila['nombre'].'</td>
           <td>'.$fila['email'].'</td>
           <td>'.$fila['telefono'].'</td>
-          <td><a href="modificar.html?'.$fila[i].'">Modificar</a></td>
-          <td><a href="borrar.php?'.$fila[i].'">Modificar</a></td>
+          <td><a href="modificar.html?filaModificar='.$fila[$i].'">Modificar</a></td>
+          <td><a href="borrar.php?filaBorrar='.$fila[$i].'">Borrar</a></td>
         </tr>';
       }
       echo '</table>';

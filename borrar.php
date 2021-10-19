@@ -1,27 +1,27 @@
-<?php
-  class Borrado{
-    function __construct(){
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Empleados PHP</title>
+  </head>
+  <body>
+    <?php
       include_once 'procesos.php';
-      $this->procesoBorrar = new Procesos();
-      $this->filaBorrar = $_get['filaBorrar'];
-      $this->iniciar();
-    }
-    function iniciar(){
-      if(!isset($_get['enviar'])){
-        echo
-        echo '<form action="#" method="get">
-          <label for="aceptar">¿Esta sequro que quiere borrar al empleado?</label>
-          <select name="aceptar">
-            <option value="0">NO</option>
-            <option value="1">SI</option>
-          </select>
-          <input type="submit" name="enviar" value="ENVIAR" />
-        </form>';
-      }else{
-        if($_get['aceptar']==1){
-          $this->procesoborrar->borrar();
-        }
+      $procesoBorrar = new Procesos();
+      $filaBorrar = $_get['filaBorrar'];
+
+      echo '<form method="get">
+        <label>¿Esta sequro que quiere borrar al empleado '.$filaBorrar.'?</label>
+        <input type="submit" name="si" value="SI" />
+        <input type="submit" name="no" value="NO" />
+      </form>';
+      if(isset($_get['si'])){
+        $procesoborrarborrar($filaBorrar);
+        header('Location:index.php');
       }
-    }
-  }
-?>
+      if(isset($_get['no'])){
+        header('Location:index.php');
+      }
+    ?>
+  </body>
+</html>

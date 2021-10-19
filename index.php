@@ -7,7 +7,8 @@
   <body>
     <?php
       include_once 'procesos.php';
-      new Procesos();
+      $procesos = new Procesos();
+      $procesos->listar();
     ?>
   </body>
 </html>

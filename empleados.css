@@ -10,7 +10,7 @@ body{
 }
 header{
 	background-color: #3a65ad;
-	height: 8.47em;
+	height: 8.63em;
 	box-shadow: 0px 3px 7px black;
 	width: 100%;
 	position: fixed;
@@ -47,7 +47,7 @@ header nav a:hover{
 	background-color: #3a65ad;
 }
 main{
-	margin: 8.47em auto 0px auto;
+	margin: 8.63em auto 0px auto;
 	width: 1300px;
   background-color: rgba(255, 255, 255, 0.7);
 	display: flex;

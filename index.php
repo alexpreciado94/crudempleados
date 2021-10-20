@@ -20,10 +20,10 @@
       <aside>
         <nav>
           <ul>
-            <li><a href="">BOTON</a></li>
-            <li><a href="">BOTON</a></li>
-            <li><a href="">BOTON</a></li>
-            <li><a href="">BOTON</a></li>
+            <li><a href="index.html">INICIO</a></li>
+  					<li><a href="https://www.php.net/manual/es/intro-whatis.php">PHP</a></li>
+  					<li><a href="recibido.php">RESPUESTAS</a></li>
+  					<li><a href="about.html">NOSOTROS</a></li>
             <li><a href="">BOTON</a></li>
             <li><a href="">BOTON</a></li>
             <li><a href="">BOTON</a></li>
@@ -52,8 +52,8 @@
         <div class="footerMenu">
           <h3>Menú</h3>
           <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="https://www.php.net/manual/es/intro-whatis.php">PHP</a></li>
             <li><a href="about.html">Nosotros</a></li>
           </ul>
         </div>

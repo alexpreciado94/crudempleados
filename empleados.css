@@ -1,0 +1,82 @@
+/*Alex Preciado*/
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	font-family: arial;
+	background-image: url(images/background.jpg);
+	font-size: 15px;
+}
+header{
+	background-color: #3a65ad;
+	height: 128px;
+	box-shadow: 0px 3px 7px black;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+}
+header img{
+	margin:4px 10px;
+}
+header nav{
+  background-color: #232323;
+  display: block;
+	text-align: center;
+  padding: 13px 0px;
+}
+header nav ul{
+	display: flex;
+	list-style-type: none;
+}
+header nav li{
+  min-width: 25%;
+}
+header nav a{
+	font-weight: bold;
+	padding: 13px;
+	font-size: 1em;
+	text-decoration: none;
+	color: white;
+	transition: all 500ms ease;
+}
+header nav a:hover{
+	background-color: #3a65ad;
+}
+main{
+	margin: 128px auto 20px auto;
+	width: 1300px;
+  background-color: white;
+}
+aside{
+  width: 18%;
+  display: inline-block;
+  padding: 2%;
+}
+aside nav{
+  background-color: #232323;
+	text-align: center;
+}
+aside nav ul{
+	list-style-type: none;
+}
+aside nav a{
+  display: block;
+  border: solid 1px white;
+	font-weight: bold;
+	padding: 5px;
+	font-size: 1em;
+	text-decoration: none;
+	color: white;
+	transition: all 500ms ease;
+}
+aside nav a:hover{
+	background-color: #3a65ad;
+}
+section{
+  width:
+  padding: 30px;
+  display: inline-block;
+}

@@ -4,7 +4,7 @@ class Conexion{
     $this->servidorbd = 'localhost';
     $this->usuario = 'root';
     $this->contraseña = '';
-    $this->basedatos = 'empleados';
+    $this->basedatos = 'empleadosphp';
 
     $this->conexion = new mysqli($this->servidorbd, $this->usuario, $this->contraseña, $this->basedatos);
   }

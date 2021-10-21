@@ -7,9 +7,9 @@
   </head>
   <body>
     <header>
-			<a href="index.html"><img src="images/logo.png"></a><nav>
+			<a href="index.php"><img src="images/logo.png"></a><nav>
 				<ul>
-					<li><a href="index.html">INICIO</a></li>
+					<li><a href="index.php">INICIO</a></li>
 					<li><a href="https://www.php.net/manual/es/intro-whatis.php">PHP</a></li>
 					<li><a href="recibido.php">RESPUESTAS</a></li>
 					<li><a href="about.html">NOSOTROS</a></li>
@@ -20,7 +20,7 @@
       <aside>
         <nav>
           <ul>
-            <li><a href="index.html">INICIO</a></li>
+            <li><a href="index.php">INICIO</a></li>
   					<li><a href="https://www.php.net/manual/es/intro-whatis.php">PHP</a></li>
   					<li><a href="recibido.php">RESPUESTAS</a></li>
   					<li><a href="about.html">NOSOTROS</a></li>
@@ -49,11 +49,11 @@
           $filaModificar = $_GET['filaModificar'];
 
           $sql = "select * from empleados where idEmpleado=".$filaModificar;
-          $resultado = $this->conexion->consultar($sql);
+          $resultado = $conexion->consultar($sql);
           $fila = mysqli_fetch_assoc($resultado);
 
           echo '<form action="procesos.php" method="POST">
-            <input type="text" name="newId" value="'.$fila['idEmpleado'].'" placeholder="id" />
+            <input type="text" name="newId" value="'.$fila['idEmpleado'].'" placeholder="id" disabled />
             <input type="text" name="newNombre" value="'.$fila['dni'].'" placeholder="Nombre Apellidos" />
             <input type="text" name="newDNI" value="'.$fila['nombre'].'" placeholder="DNI" />
             <input type="text" name="newEmail" value="'.$fila['email'].'" placeholder="E-Mail" />

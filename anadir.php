@@ -7,9 +7,9 @@
   </head>
   <body>
     <header>
-			<a href="index.html"><img src="images/logo.png"></a><nav>
+			<a href="index.php"><img src="images/logo.png"></a><nav>
 				<ul>
-					<li><a href="index.html">INICIO</a></li>
+					<li><a href="index.php">INICIO</a></li>
 					<li><a href="https://www.php.net/manual/es/intro-whatis.php">PHP</a></li>
 					<li><a href="recibido.php">RESPUESTAS</a></li>
 					<li><a href="about.html">NOSOTROS</a></li>
@@ -20,7 +20,7 @@
       <aside>
         <nav>
           <ul>
-            <li><a href="index.html">INICIO</a></li>
+            <li><a href="index.php">INICIO</a></li>
   					<li><a href="https://www.php.net/manual/es/intro-whatis.php">PHP</a></li>
   					<li><a href="recibido.php">RESPUESTAS</a></li>
   					<li><a href="about.html">NOSOTROS</a></li>

@@ -80,6 +80,54 @@ section{
   width: 100%;
   padding: 2%;
 }
+h1{
+	margin-bottom: 10px;
+}
+table{
+	border: solid 2px #232323;
+	background-color: white;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+th{
+	text-align: center;
+	padding: 10px;
+	background-color: #3a65ad;
+	color: white;
+	border: solid 2px #232323;
+}
+td{
+	text-align: center;
+	padding: 10px;
+	border: solid 2px #232323;
+}
+.anadir{
+	color: white;
+	padding: 10px;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: #3a65ad;
+	transition: all 500ms ease;
+}
+.anadir:hover{
+	background-color: #232323;
+}
+input{
+	padding: 10px;
+	border: solid 2px #3a65ad;
+	margin-bottom: 10px;
+}
+input[type="submit"]{
+	display: block;
+	color: white;
+	font-weight: bold;
+	background-color: #3a65ad;
+	transition: all 500ms ease;
+}
+input[type="submit"]:hover{
+	background-color: #232323;
+	border: solid 2px #232323;
+}
 footer{
 	background-color: #3a65ad;
 	color: white;

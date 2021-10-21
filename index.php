@@ -7,9 +7,9 @@
   </head>
   <body>
     <header>
-			<a href="index.html"><img src="images/logo.png"></a><nav>
+			<a href="index.php"><img src="images/logo.png"></a><nav>
 				<ul>
-					<li><a href="index.html">INICIO</a></li>
+					<li><a href="index.php">INICIO</a></li>
 					<li><a href="https://www.php.net/manual/es/intro-whatis.php">PHP</a></li>
 					<li><a href="recibido.php">RESPUESTAS</a></li>
 					<li><a href="about.html">NOSOTROS</a></li>
@@ -20,7 +20,7 @@
       <aside>
         <nav>
           <ul>
-            <li><a href="index.html">INICIO</a></li>
+            <li><a href="index.php">INICIO</a></li>
   					<li><a href="https://www.php.net/manual/es/intro-whatis.php">PHP</a></li>
   					<li><a href="recibido.php">RESPUESTAS</a></li>
   					<li><a href="about.html">NOSOTROS</a></li>
@@ -40,46 +40,6 @@
       </aside>
       <section>
         <h1>Lista de Empleados</h1>
-        <table>
-      <tr>
-        <th>ID</th>
-        <th>DNI</th>
-        <th>NOMBRE</th>
-        <th>E-MAIL</th>
-        <th>TELÉFONO</th>
-      </tr><tr>
-          <td>1</td>
-          <td>00000000C</td>
-          <td>Alex Preciado</td>
-          <td>alexpreciado94@hotmailcom</td>
-          <td>622342373</td>
-          <td><a href="modificar.html?filaModificar=1">Modificar</a></td>
-          <td><a href="borrar.php?filaBorrar=1">Borrar</a></td>
-        </tr><tr>
-          <td>2</td>
-          <td>00000001D</td>
-          <td>Alejandro Moreno</td>
-          <td>alejandro@gmail.com</td>
-          <td>666111222</td>
-          <td><a href="modificar.html?filaModificar=2">Modificar</a></td>
-          <td><a href="borrar.php?filaBorrar=2">Borrar</a></td>
-        </tr><tr>
-          <td>3</td>
-          <td>00000010K</td>
-          <td>Manuel Solis</td>
-          <td></td>
-          <td>616444555</td>
-          <td><a href="modificar.php?filaModificar=3">Modificar</a></td>
-          <td><a href="borrar.php?filaBorrar=3">Borrar</a></td>
-        </tr><tr>
-          <td>4</td>
-          <td>00000100L</td>
-          <td>Diego Carrion</td>
-          <td>diego@msn.es</td>
-          <td>696333777</td>
-          <td><a href="modificar.html?filaModificar=4">Modificar</a></td>
-          <td><a href="borrar.php?filaBorrar=4">Borrar</a></td>
-        </tr></table>
         <?php
           include_once 'procesos.php';
           $procesos = new Procesos();

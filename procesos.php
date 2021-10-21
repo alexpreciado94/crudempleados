@@ -23,7 +23,7 @@
           <td>'.$fila['nombre'].'</td>
           <td>'.$fila['email'].'</td>
           <td>'.$fila['telefono'].'</td>
-          <td><a href="modificar.html?filaModificar='.$fila['idEmpleado'].'">Modificar</a></td>
+          <td><a href="modificar.php?filaModificar='.$fila['idEmpleado'].'">Modificar</a></td>
           <td><a href="borrar.php?filaBorrar='.$fila['idEmpleado'].'">Borrar</a></td>
         </tr>';
       }

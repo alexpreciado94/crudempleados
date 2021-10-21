@@ -29,20 +29,17 @@
       }
       echo '</table>';
     }
-    function anadir(){
-      $sql = "insert into empleados values (".$_POST['newId'].", '"
-      .$_POST['newDNI'].'", "'.$_POST['newNombre'].'", "'
-      .$_POST['newEmail'].'", "'.$_POST['newTelefono']."');";
+    function anadir($id, $dni, $nombre, $email, $telefono){
+      $sql = "insert into empleados values (".$id.", '"
+      .$dni."', '".$nombre."', '".$email."', '".$telefono."')";
       $resultado = $this->conexion->consultar($sql);
     }
-    function modificar(){
+    function modificar($id, $dni, $nombre, $email, $telefono){
       $sql = "update empleados set dni='"
-      .$_POST['newDNI'].'", nombre="'.$_POST['newNombre'].'", email="'
-      .$_POST['newEmail'].'", telefono="'.$_POST['newTelefono']."'
-      where idEmpleado=".$modificarId.";";
+      .$dni."', nombre='".$nombre."', email='"
+      .$email."', telefono='".$telefono."'
+      where idEmpleado=".$id.";";
       $resultado = $this->conexion->consultar($sql);
-
-      header('Location:index.php');
     }
     function borrar($borrarId){
       $sql = "delete from empleados where idEmpleado=".$borrarId;

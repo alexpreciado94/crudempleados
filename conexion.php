@@ -9,7 +9,9 @@ class Conexion{
     $this->conexion = new mysqli($this->servidorbd, $this->usuario, $this->contraseña, $this->basedatos);
   }
   function consultar($consulta){
-    return mysqli_query($this->conexion, $consulta);
+    $resultado = mysqli_query($this->conexion, $consulta);
+    echo $this->conexion->error;
+    return $resultado;
   }
 }
 ?>

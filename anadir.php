@@ -39,11 +39,11 @@
         </nav>
       </aside>
       <section>
-        <h1>Datos del Empleado</h1>
-        <form action="procesos.php" method="POST">
+        <h1>Añadir Empleado</h1>
+        <form method="POST">
           <input type="text" name="newId" placeholder="id" />
-          <input type="text" name="newNombre" placeholder="Nombre Apellidos" />
           <input type="text" name="newDNI" placeholder="DNI" />
+          <input type="text" name="newNombre" placeholder="Nombre Apellidos" />
           <input type="text" name="newEmail" placeholder="E-Mail" />
           <input type="text" name="newTelefono" placeholder="Teléfono" />
           <input type="submit" name="enviar" value="AÑADIR" />
@@ -52,7 +52,7 @@
           include_once 'procesos.php';
           $procesoAnadir = new Procesos();
           if(isset($_POST['enviar'])){ //Tiene k recibir algo y el formulario envia a procesos no aqui
-            $procesoAnadir->anadir();
+            $procesoAnadir->anadir($_POST["newId"], $_POST["newDNI"], $_POST["newNombre"], $_POST["newEmail"], $_POST["newTelefono"]);
             header('Location:index.php');
           }
         ?>

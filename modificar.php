@@ -39,10 +39,10 @@
         </nav>
       </aside>
       <section>
-        <h1>Datos del Empleado</h1>
+        <h1>Modificar Datos del Empleado</h1>
         <?php
           include_once 'procesos.php';
-          $procesoAnadir = new Procesos();
+          $procesoModificar = new Procesos();
           include_once 'conexion.php';
           $conexion = new Conexion();
 
@@ -52,17 +52,17 @@
           $resultado = $conexion->consultar($sql);
           $fila = mysqli_fetch_assoc($resultado);
 
-          echo '<form action="procesos.php" method="POST">
+          echo '<form method="POST">
             <input type="text" name="newId" value="'.$fila['idEmpleado'].'" placeholder="id" disabled />
-            <input type="text" name="newNombre" value="'.$fila['dni'].'" placeholder="Nombre Apellidos" />
-            <input type="text" name="newDNI" value="'.$fila['nombre'].'" placeholder="DNI" />
+            <input type="text" name="newDNI" value="'.$fila['dni'].'" placeholder="DNI" />
+            <input type="text" name="newNombre" value="'.$fila['nombre'].'" placeholder="Nombre Apellidos" />
             <input type="text" name="newEmail" value="'.$fila['email'].'" placeholder="E-Mail" />
             <input type="text" name="newTelefono" value="'.$fila['telefono'].'" placeholder="Teléfono" />
-            <input type="submit" name="enviar" value="AÑADIR" />
+            <input type="submit" name="enviar" value="MODIFICAR" />
           </form>';
 
-          if(isset($_POST['enviar'])){ //Tiene k recibir algo y el formulario envia a procesos no aqui
-            $procesoAnadir->modificar($fila['idEmpleado']);
+          if(isset($_POST['enviar'])){
+            $procesoModificar->modificar($fila['idEmpleado'], $_POST["newDNI"], $_POST["newNombre"], $_POST["newEmail"], $_POST["newTelefono"]);
             header('Location:index.php');
           }
         ?>

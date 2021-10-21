@@ -29,17 +29,17 @@
       }
       echo '</table>';
     }
-    function anadir($formularioAnadir){
-      $sql = "insert into empleados values (".$formularioAnadir['newId'].", '"
-      .$formularioAnadir['newDNI'].'", "'.$formularioAnadir['newNombre'].'", "'
-      .$formularioAnadir['newEmail'].'", "'.$formularioAnadir['newTelefono']."');";
+    function anadir(){
+      $sql = "insert into empleados values (".$_POST['newId'].", '"
+      .$_POST['newDNI'].'", "'.$_POST['newNombre'].'", "'
+      .$_POST['newEmail'].'", "'.$_POST['newTelefono']."');";
       $resultado = $this->conexion->consultar($sql);
     }
-    function modificar($formularioModificar){
+    function modificar(){
       $sql = "update empleados set dni='"
-      .$formularioModificar['modificarDNI'].'", nombre="'.$formularioModificar['modificarNombre'].'", email="'
-      .$formularioModificar['modificarEmail'].'", telefono="'.$formularioModificar['modificarTelefono']."'
-      where idEmpleado=".$formularioModificar['modificarId'].";";
+      .$_POST['newDNI'].'", nombre="'.$_POST['newNombre'].'", email="'
+      .$_POST['newEmail'].'", telefono="'.$_POST['newTelefono']."'
+      where idEmpleado=".$modificarId.";";
       $resultado = $this->conexion->consultar($sql);
 
       header('Location:index.php');

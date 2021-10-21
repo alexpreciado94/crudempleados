@@ -40,29 +40,19 @@
       </aside>
       <section>
         <h1>Datos del Empleado</h1>
+        <form action="procesos.php" method="POST">
+          <input type="text" name="newId" placeholder="id" />
+          <input type="text" name="newNombre" placeholder="Nombre Apellidos" />
+          <input type="text" name="newDNI" placeholder="DNI" />
+          <input type="text" name="newEmail" placeholder="E-Mail" />
+          <input type="text" name="newTelefono" placeholder="Teléfono" />
+          <input type="submit" name="enviar" value="AÑADIR" />
+        </form>
         <?php
           include_once 'procesos.php';
           $procesoAnadir = new Procesos();
-          include_once 'conexion.php';
-          $conexion = new Conexion();
-
-          $filaModificar = $_GET['filaModificar'];
-
-          $sql = "select * from empleados where idEmpleado=".$filaModificar;
-          $resultado = $this->conexion->consultar($sql);
-          $fila = mysqli_fetch_assoc($resultado);
-
-          echo '<form action="procesos.php" method="POST">
-            <input type="text" name="newId" value="'.$fila['idEmpleado'].'" placeholder="id" />
-            <input type="text" name="newNombre" value="'.$fila['dni'].'" placeholder="Nombre Apellidos" />
-            <input type="text" name="newDNI" value="'.$fila['nombre'].'" placeholder="DNI" />
-            <input type="text" name="newEmail" value="'.$fila['email'].'" placeholder="E-Mail" />
-            <input type="text" name="newTelefono" value="'.$fila['telefono'].'" placeholder="Teléfono" />
-            <input type="submit" name="enviar" value="AÑADIR" />
-          </form>';
-
           if(isset($_POST['enviar'])){ //Tiene k recibir algo y el formulario envia a procesos no aqui
-            $procesoAnadir->modificar($fila['idEmpleado']);
+            $procesoAnadir->anadir();
             header('Location:index.php');
           }
         ?>

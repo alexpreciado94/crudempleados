@@ -50,12 +50,13 @@
             <input type="submit" name="si" value="SI" />
             <input type="submit" name="no" value="NO" />
           </form>';
+
           if(isset($_POST['si'])){
             $procesoBorrar->borrar($filaBorrar);
-            header('Location:index.php');
+            header('Location: ../crudempleados/index.php');
           }
           if(isset($_POST['no'])){
-            header('Location:index.php');
+            header('Location: ../crudempleados/index.php');
           }
         ?>
       </section>

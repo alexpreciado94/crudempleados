@@ -44,8 +44,6 @@
     function borrar($borrarId){
       $sql = "delete from empleados where idEmpleado=".$borrarId;
       $resultado = $this->conexion->consultar($sql);
-
-      header('Location:index.php');
     }
   }
 ?>

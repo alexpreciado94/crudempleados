@@ -40,10 +40,12 @@
       .$email."', telefono='".$telefono."'
       where idEmpleado=".$id.";";
       $resultado = $this->conexion->consultar($sql);
+      header('Location: ../crudempleados/index.php');
     }
     function borrar($borrarId){
       $sql = "delete from empleados where idEmpleado=".$borrarId;
       $resultado = $this->conexion->consultar($sql);
+      header('Location: ../crudempleados/index.php');
     }
   }
 ?>

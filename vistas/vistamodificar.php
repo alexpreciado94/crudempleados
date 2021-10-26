@@ -43,28 +43,15 @@
         <?php
           include_once 'procesos.php';
           $procesoModificar = new Procesos();
-          include_once 'conexion.php';
-          $conexion = new Conexion();
-
-          $filaModificar = $_GET['filaModificar'];
-
-          $sql = "select * from empleados where idEmpleado=".$filaModificar;
-          $resultado = $conexion->consultar($sql);
-          $fila = mysqli_fetch_assoc($resultado);
 
           echo '<form method="POST">
-            <input type="text" name="newId" value="'.$fila['idEmpleado'].'" placeholder="id" disabled />
-            <input type="text" name="newDNI" value="'.$fila['dni'].'" placeholder="DNI" />
-            <input type="text" name="newNombre" value="'.$fila['nombre'].'" placeholder="Nombre Apellidos" />
-            <input type="text" name="newEmail" value="'.$fila['email'].'" placeholder="E-Mail" />
-            <input type="text" name="newTelefono" value="'.$fila['telefono'].'" placeholder="Teléfono" />
+            <input type="text" name="newId" value="'.$_GET['idModificar'].'" placeholder="id" disabled />
+            <input type="text" name="newDNI" value="'.$_GET['dniModificar'].'" placeholder="DNI" />
+            <input type="text" name="newNombre" value="'.$_GET['nombreModificar'].'" placeholder="Nombre Apellidos" />
+            <input type="text" name="newEmail" value="'.$_GET['emailModificar'].'" placeholder="E-Mail" />
+            <input type="text" name="newTelefono" value="'.$_GET['telefonoModificar'].'" placeholder="Teléfono" />
             <input type="submit" name="enviar" value="MODIFICAR" />
           </form>';
-
-          if(isset($_POST['enviar'])){
-            $procesoModificar->modificar($fila['idEmpleado'], $_POST["newDNI"], $_POST["newNombre"], $_POST["newEmail"], $_POST["newTelefono"]);
-            header('Location: ../crudempleados/index.php');
-          }
         ?>
       </section>
     </main>

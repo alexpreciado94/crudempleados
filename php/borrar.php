@@ -11,5 +11,5 @@
       header('Location: ../crudempleados/index.php');
     }
   }else{
-    include_once 'vistaborrar.php';
+    include_once 'vistas/vistaborrar.php';
   }

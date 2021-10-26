@@ -23,7 +23,8 @@
           <td>'.$fila['nombre'].'</td>
           <td>'.$fila['email'].'</td>
           <td>'.$fila['telefono'].'</td>
-          <td><a href="modificar.php?filaModificar='.$fila['idEmpleado'].'">Modificar</a></td>
+          <td><a href="modificar.php?idModificar='.$fila['idEmpleado'].'&dniModificar='.$fila['dni'].
+          '&nombreModificar='.$fila['nombre'].'&emailModificar='.$fila['email'].'&telefonoModificar='.$fila['telefono'].'">Modificar</a></td>
           <td><a href="borrar.php?filaBorrar='.$fila['idEmpleado'].'">Borrar</a></td>
         </tr>';
       }
@@ -40,12 +41,10 @@
       .$email."', telefono='".$telefono."'
       where idEmpleado=".$id.";";
       $resultado = $this->conexion->consultar($sql);
-      header('Location: ../crudempleados/index.php');
     }
     function borrar($borrarId){
       $sql = "delete from empleados where idEmpleado=".$borrarId;
       $resultado = $this->conexion->consultar($sql);
-      header('Location: ../crudempleados/index.php');
     }
   }
 ?>

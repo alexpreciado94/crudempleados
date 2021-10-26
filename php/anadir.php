@@ -6,5 +6,5 @@
     $procesoAnadir->anadir($_POST["newId"], $_POST["newDNI"], $_POST["newNombre"], $_POST["newEmail"], $_POST["newTelefono"]);
     header('Location: ../crudempleados/index.php');
   }else{
-    include_once 'vistaanadir.html';
+    include_once 'vistas/vistaanadir.html';
   }

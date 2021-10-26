@@ -41,7 +41,7 @@
       <section>
         <h1>Lista de Empleados</h1>
         <?php
-          include_once 'procesos.php';
+          include_once 'php/procesos.php';
           $procesos = new Procesos();
           $procesos->listar();
         ?>

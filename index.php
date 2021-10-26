@@ -45,7 +45,7 @@
           $procesos = new Procesos();
           $procesos->listar();
         ?>
-        <a class="anadir" href="anadir.php">Añadir Nuevo Empleado</a>
+        <a class="anadir" href="php/anadir.php">Añadir Nuevo Empleado</a>
       </section>
     </main>
     <footer>

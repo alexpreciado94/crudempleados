@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Empleados PHP</title>
-    <link rel="stylesheet" href="empleados.css">
+    <link rel="stylesheet" href="../empleados.css">
   </head>
   <body>
     <header>

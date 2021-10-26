@@ -11,6 +11,7 @@ class Conexion{
   function consultar($consulta){
     $resultado = mysqli_query($this->conexion, $consulta);
     echo $this->conexion->error;
+    echo $consulta;
     return $resultado;
   }
 }

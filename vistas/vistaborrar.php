@@ -61,9 +61,9 @@
           </ul>
         </div>
         <div id="social">
-          <img src="images/social1.png">
-          <img src="images/social2.png">
-          <img src="images/social3.png">
+          <img src="../images/social1.png">
+          <img src="../images/social2.png">
+          <img src="../images/social3.png">
         </div>
       </div>
       <div id="footerdown">

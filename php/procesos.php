@@ -31,15 +31,27 @@
       echo '</table>';
     }
     function anadir($id, $dni, $nombre, $email, $telefono){
-      $sql = "insert into empleados values (".$id.", '"
-      .$dni."', '".$nombre."', '".$email."', '".$telefono."')";
+      if($email==''){
+        $sql = "insert into empleados values (".$id.", '"
+        .$dni."', '".$nombre."', NULL, '".$telefono."')";
+      }else{
+        $sql = "insert into empleados values (".$id.", '"
+        .$dni."', '".$nombre."', '".$email."', '".$telefono."')";
+      }
       $resultado = $this->conexion->consultar($sql);
     }
     function modificar($id, $dni, $nombre, $email, $telefono){
-      $sql = "update empleados set dni='"
-      .$dni."', nombre='".$nombre."', email='"
-      .$email."', telefono='".$telefono."'
-      where idEmpleado=".$id.";";
+      if($email==''){
+        $sql = "update empleados set dni='"
+        .$dni."', nombre='".$nombre."', email=NULL,
+        telefono='".$telefono."'
+        where idEmpleado=".$id.";";
+      }else{
+        $sql = "update empleados set dni='"
+        .$dni."', nombre='".$nombre."', email='"
+        .$email."', telefono='".$telefono."'
+        where idEmpleado=".$id.";";
+      }
       $resultado = $this->conexion->consultar($sql);
     }
     function borrar($borrarId){

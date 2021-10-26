@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-			<a href="index.php"><img src="images/logo.png"></a><nav>
+			<a href="index.php"><img src="../images/logo.png"></a><nav>
 				<ul>
 					<li><a href="index.php">INICIO</a></li>
 					<li><a href="https://www.php.net/manual/es/intro-whatis.php">PHP</a></li>
@@ -42,7 +42,8 @@
         <h1>Modificar Datos del Empleado</h1>
         <?php
           echo '<form method="POST">
-            <input type="text" name="newId" value="'.$_GET['idModificar'].'" placeholder="id" disabled />
+            <input type="text" value="'.$_GET['idModificar'].'" placeholder="id" disabled />
+            <input type="hidden" name="newId" value="'.$_GET['idModificar'].'" />
             <input type="text" name="newDNI" value="'.$_GET['dniModificar'].'" placeholder="DNI" pattern="[0-9]{8}[A-Z]" />
             <input type="text" name="newNombre" value="'.$_GET['nombreModificar'].'" placeholder="Nombre Apellidos" />
             <input type="text" name="newEmail" value="'.$_GET['emailModificar'].'" placeholder="E-Mail" />
@@ -63,9 +64,9 @@
           </ul>
         </div>
         <div id="social">
-          <img src="images/social1.png">
-          <img src="images/social2.png">
-          <img src="images/social3.png">
+          <img src="../images/social1.png">
+          <img src="../images/social2.png">
+          <img src="../images/social3.png">
         </div>
       </div>
       <div id="footerdown">

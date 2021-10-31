@@ -121,7 +121,6 @@ input{
 	margin-bottom: 0.65em;
 }
 input[type="submit"]{
-	display: block;
 	color: white;
 	font-weight: bold;
 	background-color: #3a65ad;

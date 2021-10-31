@@ -44,8 +44,10 @@
           echo '<form method="POST">
             <label>¿Esta sequro que quiere borrar al empleado '.$_GET['filaBorrar'].'?</label>
             <input type="hidden" name="idBorrar" value="'.$_GET['filaBorrar'].'" />
-            <input type="submit" class="borrar" name="si" value="SI" />
-            <input type="submit" class="borrar" name="no" value="NO" />
+            <div>
+              <input type="submit" name="si" value="SI" />
+              <input type="submit" name="no" value="NO" />
+            </div>
           </form>';
         ?>
       </section>

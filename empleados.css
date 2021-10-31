@@ -118,7 +118,6 @@ input{
 	margin-bottom: 10px;
 }
 input[type="submit"]{
-	display: block;
 	color: white;
 	font-weight: bold;
 	background-color: #3a65ad;

@@ -26,6 +26,9 @@ header nav{
   display: block;
 	text-align: center;
 	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
 }
 header nav ul{
 	list-style-type: none;
@@ -68,7 +71,7 @@ aside nav a{
   display: block;
   border: solid 1px white;
 	font-weight: bold;
-	padding: 5px;
+	padding: 0.3em;
 	text-decoration: none;
 	color: white;
 	transition: all 500ms ease;
@@ -81,29 +84,29 @@ section{
   padding: 2%;
 }
 h1{
-	margin-bottom: 10px;
+	margin-bottom: 0.65em;
 }
 table{
 	border: solid 2px #232323;
 	background-color: white;
 	border-collapse: collapse;
-	margin-bottom: 20px;
+	margin-bottom: 1.3em;
 }
 th{
 	text-align: center;
-	padding: 10px;
+	padding: 0.65em;
 	background-color: #3a65ad;
 	color: white;
 	border: solid 2px #232323;
 }
 td{
 	text-align: center;
-	padding: 10px;
+	padding: 0.65em;
 	border: solid 2px #232323;
 }
 .anadir{
 	color: white;
-	padding: 10px;
+	padding: 0.65em;
 	text-decoration: none;
 	font-weight: bold;
 	background-color: #3a65ad;
@@ -113,9 +116,9 @@ td{
 	background-color: #232323;
 }
 input{
-	padding: 10px;
+	padding: 0.65em;
 	border: solid 2px #3a65ad;
-	margin-bottom: 10px;
+	margin-bottom: 0.65em;
 }
 input[type="submit"]{
 	color: white;
@@ -126,6 +129,9 @@ input[type="submit"]{
 input[type="submit"]:hover{
 	background-color: #232323;
 	border: solid 2px #232323;
+}
+.borrar{
+	display: inline-block;
 }
 footer{
 	background-color: #3a65ad;
@@ -165,14 +171,14 @@ footer a{
 }
 #privacidad{
 	text-decoration: underline;
-	margin-left: 20px;
-	line-height: 30px;
+	margin-left: 1%;
+	line-height: 2em;
 }
 #footerdown p{
 	display: inline;
 	float: right;
-	margin-right: 20px;
-	line-height: 30px;
+	margin-right: 1%;
+	line-height: 2em;
 }
 #alex{
 	font-weight: bold;

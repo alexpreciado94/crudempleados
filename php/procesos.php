@@ -23,9 +23,9 @@
           <td>'.$fila['nombre'].'</td>
           <td>'.$fila['email'].'</td>
           <td>'.$fila['telefono'].'</td>
-          <td><a href="php/modificar.php?idModificar='.$fila['idEmpleado'].'&dniModificar='.$fila['dni'].
+          <td><a href="php/opciones.php?irA=1&idModificar='.$fila['idEmpleado'].'&dniModificar='.$fila['dni'].
           '&nombreModificar='.$fila['nombre'].'&emailModificar='.$fila['email'].'&telefonoModificar='.$fila['telefono'].'">Modificar</a></td>
-          <td><a href="php/borrar.php?filaBorrar='.$fila['idEmpleado'].'">Borrar</a></td>
+          <td><a href="php/opciones.php?irA=2&filaBorrar='.$fila['idEmpleado'].'">Borrar</a></td>
         </tr>';
       }
       echo '</table>';

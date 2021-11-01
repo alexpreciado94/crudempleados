@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-			<a href="/crudempleados/index.php"><img src="images/logo.png"></a><nav>
+			<a href="/crudempleados/index.php"><img src="/crudempleados/images/logo.png"></a><nav>
 				<ul>
 					<li><a href="/crudempleados/index.php">INICIO</a></li>
 					<li><a href="https://www.php.net/manual/es/intro-whatis.php">PHP</a></li>

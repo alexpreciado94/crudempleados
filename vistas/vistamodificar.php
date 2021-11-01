@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-			<a href="/crudempleados/index.php"><img src="images/logo.png"></a><nav>
+			<a href="/crudempleados/index.php"><img src="/crudempleados/images/logo.png"></a><nav>
 				<ul>
 					<li><a href="/crudempleados/index.php">INICIO</a></li>
 					<li><a href="https://www.php.net/manual/es/intro-whatis.php">PHP</a></li>
@@ -44,10 +44,14 @@
           echo '<form method="POST">
             <input type="text" value="'.$_GET['idModificar'].'" placeholder="id" disabled />
             <input type="hidden" name="newId" value="'.$_GET['idModificar'].'" />
-            <input type="text" name="newDNI" value="'.$_GET['dniModificar'].'" placeholder="DNI" pattern="[0-9]{8}[A-Z]" />
-            <input type="text" name="newNombre" value="'.$_GET['nombreModificar'].'" placeholder="Nombre Apellidos" />
-            <input type="text" name="newEmail" value="'.$_GET['emailModificar'].'" placeholder="E-Mail" />
-            <input type="text" name="newTelefono" value="'.$_GET['telefonoModificar'].'" placeholder="Teléfono" pattern="[0-9]{9}" />
+            <div>
+              <input type="text" name="newDNI" value="'.$_GET['dniModificar'].'" placeholder="DNI" pattern="[0-9]{8}[A-Z]" />
+              <input type="text" name="newNombre" value="'.$_GET['nombreModificar'].'" placeholder="Nombre Apellidos" />
+            </div>
+            <div>
+              <input type="text" name="newEmail" value="'.$_GET['emailModificar'].'" placeholder="E-Mail" />
+              <input type="text" name="newTelefono" value="'.$_GET['telefonoModificar'].'" placeholder="Teléfono" pattern="[0-9]{9}" />
+            </div>
             <div>
               <input type="submit" name="enviar" value="MODIFICAR" />
             </div>

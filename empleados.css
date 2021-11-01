@@ -87,6 +87,7 @@ h1{
 	margin-bottom: 0.65em;
 }
 table{
+	width: 75%;
 	border: solid 2px #232323;
 	background-color: white;
 	border-collapse: collapse;
@@ -116,11 +117,13 @@ td{
 	background-color: #232323;
 }
 input{
+	width: 20%;
 	padding: 0.65em;
 	border: solid 2px #3a65ad;
 	margin-bottom: 0.65em;
 }
 input[type="submit"]{
+	width: 15%;
 	color: white;
 	font-weight: bold;
 	background-color: #3a65ad;
@@ -129,9 +132,6 @@ input[type="submit"]{
 input[type="submit"]:hover{
 	background-color: #232323;
 	border: solid 2px #232323;
-}
-.borrar{
-	display: inline-block;
 }
 footer{
 	background-color: #3a65ad;

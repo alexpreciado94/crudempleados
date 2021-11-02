@@ -1,12 +1,9 @@
 <?php
 class Conexion{
   function __construct(){
-    $this->servidorbd = 'localhost';
-    $this->usuario = 'root';
-    $this->contraseña = '';
-    $this->basedatos = 'empleadosphp';
+    include_once './configDB.php';
 
-    $this->conexion = new mysqli($this->servidorbd, $this->usuario, $this->contraseña, $this->basedatos);
+    $this->conexion = new mysqli(SERVIDORBD, USUARIO, CONTRASENA, BASEDATOS);
   }
   function consultar($consulta){
     $resultado = mysqli_query($this->conexion, $consulta);
@@ -14,4 +11,3 @@ class Conexion{
     return $resultado;
   }
 }
-?>

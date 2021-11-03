@@ -49,6 +49,13 @@
             <input type="submit" name="enviar" value="BUSCAR" />
           </div>
         </form>
+        <?php
+          include_once '../php/procesos.php';
+          $procesoBuscar = new Procesos();
+          if(isset($_POST['enviar'])){
+            $procesoBuscar->buscar($_POST["dniBuscar"], $_POST["nombreBuscar"]);
+          }
+        ?>
       </section>
     </main>
     <footer>

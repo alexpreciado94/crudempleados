@@ -105,7 +105,7 @@ td{
 	padding: 0.65em;
 	border: solid 2px #232323;
 }
-.anadir{
+.boton{
 	color: white;
 	padding: 0.65em;
 	text-decoration: none;
@@ -113,7 +113,7 @@ td{
 	background-color: #3a65ad;
 	transition: all 500ms ease;
 }
-.anadir:hover{
+.boton:hover{
 	background-color: #232323;
 }
 input{

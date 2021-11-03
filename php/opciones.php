@@ -10,6 +10,9 @@ switch($_GET['irA']){
   case '3':
     header('Location: /crudempleados/php/anadir.php');
     break;
+    case '4':
+      header('Location: /crudempleados/php/buscar.php');
+      break;
   default:
     header('Location: /crudempleados/index.php');
     break;

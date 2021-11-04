@@ -31,14 +31,11 @@
     }
     function anadir($dni, $nombre, $email, $telefono){
       if($email==''){
-        $sql = "insert into empleados('dni', 'nombre', 'email', 'telefono') values ('"
-        .$dni."', '".$nombre."', NULL, '".$telefono."')";
+        $sql = "insert into empleados(dni, nombre, email, telefono) values ('".$dni."', '".$nombre."', NULL, '".$telefono."')";
       }else{
-        $sql = "insert into empleados('dni', 'nombre', 'email', 'telefono') values ('"
-        .$dni."', '".$nombre."', '".$email."', '".$telefono."')";
+        $sql = "insert into empleados(dni, nombre, email, telefono) values ('".$dni."', '".$nombre."', '".$email."', '".$telefono."')";
       }
       $resultado = $this->conexion->consultar($sql);
-      echo $sql;
     }
     function modificar($id, $dni, $nombre, $email, $telefono){
       if($email==''){

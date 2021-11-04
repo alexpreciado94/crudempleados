@@ -2,13 +2,12 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Empleados PHP</title>
     <link rel="stylesheet" href="/crudempleados/empleados.css">
   </head>
   <body>
     <header>
-			<a href="/crudempleados/index.php"><img src="images/logo.png"></a><nav>
+			<a href="/crudempleados/index.php"><img src="/crudempleados/images/logo.png"></a><nav>
 				<ul>
 					<li><a href="/crudempleados/index.php">INICIO</a></li>
 					<li><a href="https://www.php.net/manual/es/intro-whatis.php">PHP</a></li>
@@ -40,14 +39,23 @@
         </nav>
       </aside>
       <section>
-        <h1>Lista de Empleados</h1>
+        <h1>Buscar Empleado</h1>
+        <form method="POST">
+          <div>
+            <input type="text" name="dniBuscar" placeholder="DNI" pattern="[0-9]{8}[A-Z]" />
+            <input type="text" name="nombreBuscar" placeholder="Nombre Apellidos" />
+          </div>
+          <div>
+            <input type="submit" name="enviar" value="BUSCAR" />
+          </div>
+        </form>
         <?php
-          include_once 'php/procesos.php';
-          $procesos = new Procesos();
-          $procesos->listar();
+          include_once '../php/procesos.php';
+          $procesoBuscar = new Procesos();
+          if(isset($_POST['enviar'])){
+            $procesoBuscar->buscar($_POST["dniBuscar"], $_POST["nombreBuscar"]);
+          }
         ?>
-        <a class="boton" href="php/opciones.php?irA=3">Añadir Nuevo Empleado</a>
-        <a class="boton" href="php/opciones.php?irA=4">Buscar</a>
       </section>
     </main>
     <footer>

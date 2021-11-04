@@ -43,7 +43,6 @@
         <h1>Modificar Datos del Empleado</h1>
         <?php
           echo '<form method="POST">
-            <input type="text" value="'.$_GET['idModificar'].'" placeholder="id" disabled />
             <input type="hidden" name="newId" value="'.$_GET['idModificar'].'" />
             <div>
               <input type="text" name="newDNI" value="'.$_GET['dniModificar'].'" placeholder="DNI" pattern="[0-9]{8}[A-Z]" />

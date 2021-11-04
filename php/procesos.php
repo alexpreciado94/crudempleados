@@ -9,7 +9,6 @@
       $resultado = $this->conexion->consultar($sql);
       echo '<table>
       <tr>
-        <th>ID</th>
         <th>DNI</th>
         <th>NOMBRE</th>
         <th>E-MAIL</th>
@@ -18,7 +17,6 @@
       for($i=0;$i<$resultado->num_rows;$i++){
         $fila = mysqli_fetch_assoc($resultado);
         echo '<tr>
-          <td>'.$fila['idEmpleado'].'</td>
           <td>'.$fila['dni'].'</td>
           <td>'.$fila['nombre'].'</td>
           <td>'.$fila['email'].'</td>
@@ -29,16 +27,18 @@
         </tr>';
       }
       echo '</table>';
+      //echo '<p>El error es '.$this->conexion->error().'</p>';
     }
-    function anadir($id, $dni, $nombre, $email, $telefono){
+    function anadir($dni, $nombre, $email, $telefono){
       if($email==''){
-        $sql = "insert into empleados values (".$id.", '"
+        $sql = "insert into empleados('dni', 'nombre', 'email', 'telefono') values ('"
         .$dni."', '".$nombre."', NULL, '".$telefono."')";
       }else{
-        $sql = "insert into empleados values (".$id.", '"
+        $sql = "insert into empleados('dni', 'nombre', 'email', 'telefono') values ('"
         .$dni."', '".$nombre."', '".$email."', '".$telefono."')";
       }
       $resultado = $this->conexion->consultar($sql);
+      echo $sql;
     }
     function modificar($id, $dni, $nombre, $email, $telefono){
       if($email==''){
